@@ -1,6 +1,13 @@
 import { ChakraProvider, Box, Center, Input, Button, Flex } from '@chakra-ui/react'
+import { DButton } from '../button/dButton'
+import { Login } from '../../services/login'
+import { useState } from 'react'
+
 
 export const Card = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
     return (
         <ChakraProvider>
             <Box minHeight='100vh' backgroundColor='#9413dc' padding='25px'>
@@ -12,13 +19,13 @@ export const Card = () => {
                         <h1>Faça o login</h1>
                     </Center>
                     <Box padding='15px' marginTop='30px'>
-                    <Input placeholder='email' marginTop='10px' />
+                    <Input placeholder='email' marginTop='10px' value={email} onChange={(event) => setEmail(event.target.value)}/>
                     <Input placeholder='password' marginTop='35px'/>
                     </Box>
                     <Center>
-                        <Button colorScheme='teal' size='sm' width='70%' height='45px' marginTop='25px'>
-                            Button
-                        </Button>
+                        <DButton
+                        onClick={() => Login(email)}
+                        />
                     </Center>
                     
                 </Box>
