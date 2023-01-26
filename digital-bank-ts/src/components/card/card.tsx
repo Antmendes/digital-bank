@@ -1,7 +1,10 @@
-import { ChakraProvider, Box, Center, Input, Button, Flex } from '@chakra-ui/react'
+import {  Box, Center, Input } from '@chakra-ui/react'
 import { DButton } from '../button/dButton'
 import { Login } from '../../services/login'
 import { useState } from 'react'
+
+
+
 
 
 export const Card = () => {
@@ -9,7 +12,7 @@ export const Card = () => {
     const [password, setPassword] = useState('')
 
     return (
-        <ChakraProvider>
+        
             <Box minHeight='100vh' backgroundColor='#9413dc' padding='25px'>
                 <Center>
                    
@@ -32,6 +35,6 @@ export const Card = () => {
                 </Center>
                 
             </Box>
-        </ChakraProvider>
+        
     )
 }

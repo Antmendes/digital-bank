@@ -1,11 +1,10 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import { Center, Text } from '@chakra-ui/react'
 
 export const Header = () => {
     return (
-        <ChakraProvider>
-            <div>
-                <h1>Digital Bank</h1>
-            </div>
-        </ChakraProvider>
+        <Center fontSize='45px'>
+            <Text fontSize='45px'>Digital Bank</Text>
+        </Center>
+
     )
 }
